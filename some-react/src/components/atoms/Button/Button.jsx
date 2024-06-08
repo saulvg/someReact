@@ -1,7 +1,13 @@
-import { cn } from "../../../utils/helpers";
+import { cn } from "@/utils/helpers";
+import { ButtonStyles } from "./Button.styles";
 
-const Button = ({ children }) => (
-  <button className={cn("bg-red-200")}>{children}</button>
+const Button = ({ children, className, variant, size, onClick }) => (
+  <button
+    className={cn(ButtonStyles({ variant, size }), className)}
+    onClick={onClick}
+  >
+    {children}
+  </button>
 );
 
 export { Button };

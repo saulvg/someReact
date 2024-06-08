@@ -1,15 +1,15 @@
 import { cva } from "class-variance-authority";
 
-export const ButtonStyle = cva("", {
+export const ButtonStyles = cva("", {
   variants: {
     variant: {
-      defult: "",
+      default: "border rounded border-black/80 px-4 py-1",
       secondVariant: "",
     },
-  },
-  size: {
-    default: "",
-    sm: "",
+    size: {
+      default: "",
+      sm: "",
+    },
   },
   defaultVariants: {
     variant: "default",
