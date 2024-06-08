@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Button } from "../../atoms";
 import { HiPlus } from "react-icons/hi";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCoffee, faPlus } from "@fortawesome/free-solid-svg-icons";
+
 const Counter = () => {
   const [count, setCount] = useState(0);
 
@@ -10,7 +13,7 @@ const Counter = () => {
       <Button onClick={() => setCount(count + 1)}>-</Button>
       <p>{count}</p>
       <Button>
-        <HiPlus />
+        <FontAwesomeIcon icon={faPlus} />
       </Button>
     </div>
   );
