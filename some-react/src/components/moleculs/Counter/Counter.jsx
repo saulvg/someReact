@@ -1,28 +1,15 @@
-import { useState } from "react";
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Button, Title, ToastButton } from "../../index";
+import useCounter from "./useCouner";
 
 const Counter = () => {
-  const [count, setCount] = useState(0);
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleDecrease = () => {
-    if (count > 0) {
-      setCount(count - 1);
-    } else {
-      setIsOpen(true);
-      setTimeout(() => {
-        setIsOpen(false);
-      }, 3000); // Ocultar el mensaje después de 3 segundos
-    }
-  };
+  const { count, setCount, isOpen, handleDecrease } = useCounter();
 
   return (
     <div className="container">
       <Title level="h2" className="text-3xl">
-        Counter
+        Counter {"=>"} useState
       </Title>
       <div className="bg-orange-100 w-max !mx-auto containerWithBorder">
         <div className="[&>*]:inline-block [&>*]:mx-4">
