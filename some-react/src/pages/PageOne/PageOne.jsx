@@ -1,10 +1,10 @@
-import { Counter } from "../../components";
+import { Counter, FormUserName } from "@/components";
 
 const PageOne = () => {
   return (
     <>
-      <h1>Soy la pagina Uno</h1>
       <Counter />
+      <FormUserName />
     </>
   );
 };

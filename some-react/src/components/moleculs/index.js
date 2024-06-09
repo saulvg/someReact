@@ -1,2 +1,3 @@
 export { ToastButton } from "./ToastButton";
-export { Counter } from "./Counter/Counter";
+export { Counter } from "./Counter";
+export { InputFields } from "./InputFields";
