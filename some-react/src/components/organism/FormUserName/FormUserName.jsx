@@ -6,7 +6,7 @@ const FormUserName = () => {
   const { handlerSubmit, handleChange, username } = useFormUserName();
 
   return (
-    <>
+    <div className="container">
       <Title level="h2" className="text-3xl">
         Form {"=>"} useEffect
       </Title>
@@ -24,7 +24,7 @@ const FormUserName = () => {
           Submit
         </Button>
       </form>
-    </>
+    </div>
   );
 };
 
