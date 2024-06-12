@@ -1,4 +1,9 @@
-import { Counter, FormUserName, ApiAnswerCall } from "@/components";
+import {
+  Counter,
+  FormUserName,
+  ApiAnswerCall,
+  SwapColorTitle,
+} from "@/components";
 
 const PageOne = () => {
   return (
@@ -6,6 +11,7 @@ const PageOne = () => {
       <Counter />
       <FormUserName />
       <ApiAnswerCall url="https://rickandmortyapi.com/api/character" />
+      <SwapColorTitle />
     </>
   );
 };

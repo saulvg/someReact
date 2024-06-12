@@ -25,6 +25,23 @@ export const useDataApi = (url) => {
     };
 
     fetchData();
+
+    /* fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((result) => {
+        setReques((prevReq) => ({ ...prevReq, data: result }));
+      })
+      .catch((error) => {
+        setReques((prevReq) => ({ ...prevReq, error: error.message }));
+      })
+      .finally(() => {
+        setReques((prevReq) => ({ ...prevReq, loading: true }));
+      }); */
   }, [url]);
 
   return { data: request.data, loading: request.loading, error: request.error };

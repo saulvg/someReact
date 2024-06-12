@@ -1,4 +1,4 @@
-import { useDataApi } from "../../../hooks/useDataApi";
+import { useDataApi } from "@/lib/api";
 
 export const useApiAnswerCall = (url) => {
   const { data, error, loading } = useDataApi(url);

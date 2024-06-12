@@ -1,0 +1,1 @@
+export { SwapColorTitle } from "./SwapColorTitle";
