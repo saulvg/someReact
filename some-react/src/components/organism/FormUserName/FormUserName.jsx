@@ -1,13 +1,21 @@
+import { useContext } from "react";
 import { Button, Title } from "../../atoms";
 import { InputFields } from "../../moleculs";
 import useFormUserName from "./useFormUserName";
+import {
+  titleColorContext,
+  useTitleColorContext,
+} from "../../../hooks/useAppContext";
+import { cn } from "@/utils/helpers";
 
 const FormUserName = () => {
   const { handlerSubmit, handleChange, username } = useFormUserName();
+  //const { titleColor } = useContext(titleColorContext);
+  const { titleColor } = useTitleColorContext();
 
   return (
     <div className="container">
-      <Title level="h2" className="text-3xl">
+      <Title level="h2" className={cn(`text-3xl ${titleColor}`)}>
         Form {"=>"} useEffect
       </Title>
       <form onSubmit={handlerSubmit} className="container">

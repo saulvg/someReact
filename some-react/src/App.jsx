@@ -1,14 +1,12 @@
 import { PageOne } from "./pages";
-
-//const ThemeContext = createContext("light");
+import { AppContext } from "./hooks/useAppContext";
 
 function App() {
-  //const theme = useContext(ThemeContext);
   return (
-    <>
+    <AppContext>
       <h1 className="text-3xl font-bold underline">Hello world!</h1>
       <PageOne />
-    </>
+    </AppContext>
   );
 }
 

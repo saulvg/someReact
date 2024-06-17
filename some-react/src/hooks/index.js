@@ -1,1 +1,5 @@
-export { useDataApi } from "./useDataApi";
+export {
+  AppContext,
+  titleColorContext,
+  useTitleColorContext,
+} from "./useAppContext";

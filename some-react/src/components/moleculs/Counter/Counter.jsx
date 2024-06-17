@@ -2,13 +2,17 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { Button, Title, ToastButton } from "../../index";
 import useCounter from "./useCouner";
+import { useContext } from "react";
+import { cn } from "@/utils/helpers";
+import { titleColorContext } from "../../../hooks";
 
 const Counter = () => {
   const { count, setCount, isOpen, handleDecrease } = useCounter();
+  const { titleColor } = useContext(titleColorContext);
 
   return (
     <div className="container">
-      <Title level="h2" className="text-3xl">
+      <Title level="h2" className={cn(`text-3xl ${titleColor}`)}>
         Counter {"=>"} useState
       </Title>
       <div className="bg-orange-100 w-max !mx-auto containerWithBorder">
