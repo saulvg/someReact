@@ -1,4 +1,3 @@
-//import { Label } from "../atoms/Label/Label";
 import { Input, Label } from "../../index";
 
 const InputFields = ({
@@ -9,6 +8,7 @@ const InputFields = ({
   value,
   onChange,
   placeholder,
+  ref,
 }) => (
   <div className={className}>
     <Label htmlFor={inputFieldId}>{labelName}</Label>
@@ -18,7 +18,9 @@ const InputFields = ({
       value={value}
       onChange={onChange}
       placeholder={placeholder}
+      ref={ref}
     />
   </div>
 );
+
 export { InputFields };

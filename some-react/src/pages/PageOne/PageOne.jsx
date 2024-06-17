@@ -3,6 +3,7 @@ import {
   FormUserName,
   ApiAnswerCall,
   SwapColorTitle,
+  Timer,
 } from "@/components";
 
 const PageOne = () => {
@@ -12,6 +13,7 @@ const PageOne = () => {
       <FormUserName />
       <ApiAnswerCall url="https://rickandmortyapi.com/api/character" />
       <SwapColorTitle />
+      <Timer />
     </>
   );
 };
